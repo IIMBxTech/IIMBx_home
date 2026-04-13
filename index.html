@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIMBx - Premium Learning Dashboard</title>
+  <meta name="description" content="Explore top-tier programmes including Hospital Management, AI for Managers, Airlines Management, and Fintech from IIMBx.">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Animate.css for WOW.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Premium Magnetic Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- 3D Motion: WebGL Background Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- 3D Motion: Scroll progress bar -->
+  <div id="scroll-bar"></div>
+  <!-- 3D Motion: Custom magnetic cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Floating Premium Header -->
+  <header id="main-header" class="header floating-header wow animate__animated animate__fadeInDown">
+    <div class="container header-content">
+      <div class="logo">
+        <a href="#"><img src="IIMbx-new-logoo-scaled_11zon (2)_11zon_11zon.webp" alt="IIMBx Logo" class="nav-logo"></a>
+      </div>
+      <nav class="nav">
+        <div class="nav-links">
+          <a href="#programmes" class="nav-link active">Programmes</a>
+          <a href="#impact" class="nav-link">Impact</a>
+          <a href="#platforms" class="nav-link">Platforms</a>
+          <a href="#catalogue" class="nav-link">Catalogue</a>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <a href="#enroll" class="sc-btn-primary nav-cta">Get Started</a>
+        <button class="nav-toggle" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobileOverlay">
+    <div class="mobile-nav-content">
+      <a href="#programmes" class="mobile-link">Programmes</a>
+      <a href="#impact" class="mobile-link">Impact</a>
+      <a href="#platforms" class="mobile-link">Platforms</a>
+      <a href="#catalogue" class="mobile-link">Catalogue</a>
+      <a href="#enroll" class="sc-btn-primary mobile-cta">Get Started</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero: Premium 3D Scroll Driven Architecture -->
+    <section id="hero-scroll-engine">
+      <div class="hero-sticky-container" id="heroSticky">
+        
+        <!-- Background Layer (Parallax Slower) -->
+        <div class="sc-bg-layer" id="scBg">
+          <div class="sc-noise"></div>
+          <div class="sc-orb sc-orb-1"></div>
+          <div class="sc-orb sc-orb-2"></div>
+        </div>
+
+        <!-- Typography Base -->
+        <div class="sc-base-layer" id="scBase">
+          <div class="sc-left">
+            <h1 class="sc-title">
+              IIMBx <span class="sc-gradient">Digital Learning</span>
+            </h1>
+            <p class="sc-subtitle">Empowering global leaders through world-class executive education, strategic digital platforms, and industry-tailored programmes.</p>
+            <div class="sc-cta-row">
+              <a href="#catalog" class="sc-btn-primary">Explore Programmes</a>
+              <a href="#platforms" class="sc-btn-ghost">View Platforms</a>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- 3D Card DeckLayer -->
+        <div class="sc-deck-layer" id="scDeck">
+          <!-- Card 1 -->
+          <div class="sc-card" id="scard-1">
+            <div class="sc-card-glow"></div>
+            <div class="sc-card-icon"><i class="fa-solid fa-hospital"></i></div>
+            <h3>Hospital Management Programme</h3>
+            <p>Advanced healthcare operations, clinical optimization, and hospital administration strategies.</p>
+            <div class="sc-card-pills"><span class="sc-pill">12 Weeks</span></div>
+          </div>
+          <!-- Card 2 -->
+          <div class="sc-card" id="scard-2">
+            <div class="sc-card-glow"></div>
+            <div class="sc-card-icon"><i class="fa-solid fa-robot"></i></div>
+            <h3>AI for Managers Programme</h3>
+            <p>Master artificial intelligence frameworks and automation strategies for business scaling.</p>
+            <div class="sc-card-pills"><span class="sc-pill">16 Weeks</span></div>
+          </div>
+          <!-- Card 3 -->
+          <div class="sc-card" id="scard-3">
+            <div class="sc-card-glow"></div>
+            <div class="sc-card-icon"><i class="fa-solid fa-plane-departure"></i></div>
+            <h3>Airlines Management Programme</h3>
+            <p>Aviation economics, fleet planning, and global airline operations strategy.</p>
+            <div class="sc-card-pills"><span class="sc-pill">10 Weeks</span></div>
+          </div>
+          <!-- Card 4 -->
+          <div class="sc-card" id="scard-4">
+            <div class="sc-card-glow"></div>
+            <div class="sc-card-icon"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+            <h3>Fintech programme for young professionals</h3>
+            <p>Financial technology disruption, blockchain ecosystems, and next-gen banking.</p>
+            <div class="sc-card-pills"><span class="sc-pill">14 Weeks</span></div>
+          </div>
+        </div>
+
+        <!-- Stats Pod Layer (Appears at end of sequence) -->
+        <div class="sc-stats-layer" id="scStats">
+          <div class="sc-stats-pod">
+            <div class="sc-stat">
+              <div class="sc-num-row"><span class="sc-num" data-target="2">0</span>M+</div>
+              <div class="sc-lbl">Active Learners</div>
+            </div>
+            <div class="sc-div"></div>
+            <div class="sc-stat">
+              <div class="sc-num-row"><span class="sc-num" data-target="50">0</span>+</div>
+              <div class="sc-lbl">Expert Faculties</div>
+            </div>
+            <div class="sc-div"></div>
+            <div class="sc-stat">
+              <div class="sc-num-row"><span class="sc-num" data-target="100">0</span>+</div>
+              <div class="sc-lbl">Global Partners</div>
+            </div>
+            <div class="sc-div"></div>
+            <div class="sc-stat">
+              <div class="sc-num-row"><span class="sc-num" data-target="95">0</span>%</div>
+              <div class="sc-lbl">Success Rate</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PLATFORMS: Z-Depth Scroll Layering (400vh) -->
+    <section id="sc-platforms-engine" class="timeline-block theme-light" style="height: 400vh;">
+      <div class="sticky-container" id="platSticky">
+        <div class="sc-section-header">
+          <span class="sc-eyebrow"><i class="fa-solid fa-network-wired"></i> Ecosystem</span>
+          <h2 class="sc-section-title">Our Learning <span class="sc-gradient">Platforms</span></h2>
+        </div>
+        
+        <div class="plat-viewport">
+          <div class="plat-track" id="platTrack">
+            <!-- connecting line -->
+            <div class="plat-line"></div>
+            
+            <div class="plat-card" id="pcard-1">
+              <div class="plat-card-inner">
+                <div class="plat-glow"></div>
+                <div class="plat-top">
+                  <div class="plat-icon"><i class="fa-solid fa-graduation-cap"></i> <span>IIMBx</span></div>
+                  <span class="badge">Official</span>
+                </div>
+                <div class="plat-content-compact">
+                  <p>Customized learning solutions for corporate and individual capability building.</p>
+                </div>
+                <div class="plat-tags">
+                  <span class="tag"><i class="fa-solid fa-circle-play"></i> Live Classes</span>
+                  <span class="tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+                  <span class="tag">Skill Based</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="plat-card" id="pcard-2">
+              <div class="plat-card-inner">
+                <div class="plat-glow" style="--gc: rgba(59,130,246,0.3)"></div>
+                <div class="plat-top">
+                  <div class="plat-icon"><i class="fa-solid fa-chalkboard-user"></i> <span>Swayam</span></div>
+                  <span class="badge">GOVT</span>
+                </div>
+                <div class="plat-content-compact">
+                  <p>Promoting Access, Equity, and Quality through national wide-reaching learning.</p>
+                </div>
+                <div class="plat-tags">
+                  <span class="tag"><i class="fa-solid fa-circle-play"></i> Live Classes</span>
+                  <span class="tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+                  <span class="tag">National</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="plat-card" id="pcard-3">
+              <div class="plat-card-inner">
+                <div class="plat-glow" style="--gc: rgba(99,102,241,0.3)"></div>
+                <div class="plat-top">
+                  <div class="plat-icon"><i class="fa-brands fa-etsy"></i> <span>edX</span></div>
+                  <span class="badge">Global</span>
+                </div>
+                <div class="plat-content-compact">
+                  <p>India's first IIM on edX, offering world-class learning natively global scale.</p>
+                </div>
+                <div class="plat-tags">
+                  <span class="tag"><i class="fa-solid fa-circle-play"></i> Live Classes</span>
+                  <span class="tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+                  <span class="tag">Global</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="plat-card" id="pcard-4">
+              <div class="plat-card-inner">
+                <div class="plat-glow" style="--gc: rgba(59,130,246,0.3)"></div>
+                <div class="plat-top">
+                  <div class="plat-icon"><i class="fa-solid fa-hands-holding-circle"></i> <span>iGOT</span></div>
+                  <span class="badge">GOV</span>
+                </div>
+                <div class="plat-content-compact">
+                  <p>Digital platform for civil servants, executing strategic learning goals and enhancing future-ready skills.</p>
+                </div>
+                <div class="plat-tags">
+                  <span class="tag"><i class="fa-solid fa-circle-play"></i> Live Classes</span>
+                  <span class="tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+                  <span class="tag">Skill Based</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOGUE: 3D Horizontal Focus Carousel (200vh) -->
+    <section id="sc-catalogue-engine" class="timeline-block theme-light" style="height: 200vh;">
+      <div class="sticky-container" id="catSticky">
+        <div class="sc-section-header" style="position: absolute; top: 18%; width: 100%; text-align: center; z-index: 10;">
+          <h2 class="sc-section-title">Course <span class="sc-gradient">Catalogue</span></h2>
+        </div>
+        
+        <div class="cat-viewport">
+          <div class="cat-particles" id="catParticles"></div>
+          <div class="cat-track" id="catTrack">
+            
+            <div class="cat-card" id="ccard-1">
+              <div class="cat-card-inner">
+                <div class="cat-back-plate"></div>
+                <div class="cat-main">
+                  <h4>People<br>Management</h4>
+                </div>
+                <div class="cat-top-tab">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="cat-card" id="ccard-2">
+              <div class="cat-card-inner">
+                <div class="cat-back-plate"></div>
+                <div class="cat-main">
+                  <h4>Financial<br>Accounting</h4>
+                </div>
+                <div class="cat-top-tab">
+                  <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="cat-card" id="ccard-3">
+              <div class="cat-card-inner">
+                <div class="cat-back-plate"></div>
+                <div class="cat-main">
+                  <h4>Strategic<br>Management</h4>
+                </div>
+                <div class="cat-top-tab">
+                  <i class="fa-solid fa-chess-knight"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="cat-card" id="ccard-4">
+              <div class="cat-card-inner">
+                <div class="cat-back-plate"></div>
+                <div class="cat-main">
+                  <h4>Digital<br>Marketing</h4>
+                </div>
+                <div class="cat-top-tab">
+                  <i class="fa-solid fa-bullhorn"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS: Frame Engine (300vh) -->
+    <section id="sc-testimonials-engine" class="timeline-block theme-light" style="height: 300vh;">
+      <div class="sticky-container" id="testSticky">
+        <div class="sc-section-header" style="text-align: center; width: 100%; position: absolute; top: 10%;">
+          <h2 class="sc-section-title">Learner Success <span class="sc-gradient">Stories</span></h2>
+        </div>
+        
+        <div class="testi-carousel" id="testiCarousel">
+          <div class="testi-card" id="tc-1">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"The AI for Managers programme gave me the exact tools needed to spearhead automation initiatives."</p>
+            <div class="t-auth"><div class="av">AJ</div> <div><strong>Aditi Joshi</strong><br>Tech Lead</div></div>
+          </div>
+          <div class="testi-card" id="tc-2">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"Financial Accounting was delivered brilliantly. It transformed how I analyze corporate fiscal health."</p>
+            <div class="t-auth"><div class="av" style="background:#f97316">RS</div> <div><strong>Rahul Sharma</strong><br>Financial Analyst</div></div>
+          </div>
+          <div class="testi-card" id="tc-3">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"Exceptional Strategic Management insights! The faculties were world-class."</p>
+            <div class="t-auth"><div class="av" style="background:#8b5cf6">NK</div> <div><strong>Neha Kapoor</strong><br>Consultant</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA: Standard Section -->
+    <section id="sc-cta-engine" class="cta-standard" style="padding: 10rem 0; position: relative; overflow: hidden;">
+      <div class="cta-particles" id="ctaParticles"></div>
+      <div class="container text-center" style="position: relative; z-index: 2;">
+        <h2 class="sc-section-title wow animate__animated animate__fadeInUp" style="font-size:4.5rem; margin-bottom: 0.5rem;">Start Your <span class="sc-gradient">Learning Journey</span></h2>
+        <p class="wow animate__animated animate__fadeInUp" data-wow-delay="0.2s" style="color:rgba(255,255,255,0.85) !important; max-width: 500px; margin: 1rem auto 3rem; font-size:1.15rem;">
+          Join 2M+ global learners and transform your future with IIMBx.
+        </p>
+        <div class="wow animate__animated animate__zoomIn" data-wow-delay="0.4s">
+          <a href="#" class="sc-btn-primary" style="transform: scale(1.15); display: inline-flex;">Enroll Now <i class="fa-solid fa-bolt" style="margin-left: 8px;"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <p>&copy; 2026 IIMBx. Premium Education for Next-Gen Leaders.</p>
+    </div>
+  </footer>
+
+  <!-- Three.js from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- WOW.js Script for Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
